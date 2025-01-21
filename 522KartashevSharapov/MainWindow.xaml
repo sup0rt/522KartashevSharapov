@@ -20,7 +20,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="Source\task.jpg" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Image Source="Source\task.jpg" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="100" MaxWidth="300"/>
 
         <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="70" ToolTip="Ввод данных" >
             <Label x:Name="xLabel" Content="x:"/>
