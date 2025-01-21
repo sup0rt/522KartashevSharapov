@@ -7,6 +7,42 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Source\task.jpg" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="70" ToolTip="Ввод данных" >
+            <Label x:Name="xLabel" Content="x:"/>
+            <TextBox x:Name="X" ToolTip="Ввод х" />
+            <Label x:Name="yLabel" Content="y:" />
+            <TextBox x:Name="Y" ToolTip="Ввод у" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  MaxWidth="200" MaxHeight="50"  ToolTip="Ответ на задачу" >
+            <Label x:Name="ansLabel" Content="Ответ:" />
+            <TextBox x:Name="Answer" IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="20" HorizontalAlignment="Center" ToolTip="Выберите функцию f(x)">
+            <RadioButton x:Name="doSh" Content="sh(x)" ToolTip="Гиперболический синус" />
+            <RadioButton x:Name="doSqare" Content="x^2" ToolTip="Квадрат" />
+            <RadioButton x:Name="doE" Content="e^x" ToolTip="Экспонента" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Элементы управления">
+            <Button x:Name="Count" Content="Рассчитать" Margin="5" Click="Count_Click" ToolTip="Нажмите, чтобы получить ответ" />
+            <Button x:Name="Clear" Content="Очистить" Margin="5" Click="Clear_Click" ToolTip="Нажмите, чтобы очистить выбранные значения" />
+        </StackPanel>
     </Grid>
 </Window>
