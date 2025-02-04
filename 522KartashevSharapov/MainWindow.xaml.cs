@@ -40,16 +40,56 @@ namespace _522KartashevSharapov
                     double result = 0;
 
                     if (doSh.IsChecked == true)
-                    {
-                        result = Math.Sinh(x);
+                    {               
+                        if (x > 0 && y > 0)
+                        {
+                            result = Math.Pow(Math.Sinh(x) + y, 2) - Math.Sqrt(Math.Sinh(x) * y);
+                        }
+
+                        else if (x < 0 && y < 0)
+                        {
+                            result = Math.Pow(Math.Sinh(x) + y, 2) + Math.Sqrt(Math.Abs(Math.Sinh(x) * y));
+                        }
+
+
+                        else
+                        {
+                            result = Math.Pow(Math.Sinh(x) + y, 2) + 1;
+                        }
                     }
                     else if (doSqare.IsChecked == true)
                     {
-                        result = Math.Pow(x, 2) + Math.Pow(y, 2);
+                        if (x > 0 && y > 0)
+                        {
+                            result = Math.Pow(Math.Pow(x, 2) + y, 2) - Math.Sqrt(Math.Pow(x, 2) * y);
+                        }
+
+                        else if (x < 0 && y < 0)
+                        {
+                            result = Math.Pow(Math.Pow(x, 2) + y, 2) + Math.Sqrt(Math.Abs(Math.Pow(x, 2) * y));
+                        }
+
+                        else
+                        {
+                            result = Math.Pow(Math.Pow(x, 2) + y, 2) + 1;
+                        }
                     }
                     else if (doE.IsChecked == true)
                     {
-                        result = Math.Exp(x + y);
+                        if (x > 0 && y > 0)
+                        {
+                            result = Math.Pow(Math.Exp(x) + y, 2) - Math.Sqrt(Math.Exp(x) * y);
+                        }
+
+                        else if (x < 0 && y < 0)
+                        {
+                            result = Math.Pow(Math.Exp(x) + y, 2) + Math.Sqrt(Math.Abs(Math.Exp(x) * y));
+                        }
+
+                        else
+                        {
+                            result = Math.Pow(Math.Exp(x) + y, 2) + 1;
+                        }
                     }
                     else
                     {
